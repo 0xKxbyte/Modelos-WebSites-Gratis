@@ -42,7 +42,7 @@ Para baixar e rodar qualquer um destes modelos na sua máquina, siga os passos a
 2. Clique no botão **Code** e copie o link (ou faça o download do arquivo `.zip`).
 3. Abra o seu terminal e clone o repositório utilizando o comando:
    ```bash
-   git clone [https://github.com/0xKxbyte/Modelos-WebSites-Gratis.git
+   git clone https://github.com/0xKxbyte/Modelos-WebSites-Gratis.git
    ```
 4. Abra a pasta do projeto em um editor de código (como o [Visual Studio Code](https://visualstudio.com)).
 5. Abra o arquivo `index.html` no seu navegador para visualizar o resultado.
