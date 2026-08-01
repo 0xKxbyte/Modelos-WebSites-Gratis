@@ -1,4 +1,4 @@
-# 🎨 Catálogo de Templates Web (HTML, CSS e JS)
+# 🎨 Catálogo de Templates Web (HTML, CSS e JS e PHP e SQL e +)
 
 Bem-vindo(a) ao meu repositório de recursos para desenvolvimento web! Aqui você encontrará uma curadoria de modelos de sites gratuitos, 100% responsivos e construídos usando tecnologias web modernas. 
 
