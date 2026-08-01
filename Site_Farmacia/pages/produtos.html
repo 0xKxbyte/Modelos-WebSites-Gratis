@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Produtos Vitalis Farma: medicamentos, dermocosmeticos, vitaminas, higiene e genericos com precos especiais.">
+  <title>Produtos — Vitalis Farma</title>
+  <link rel="icon" type="image/svg+xml" href="../data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f172a'/%3E%3Cpath d='M16 8v16M8 16h16' stroke='white' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="loading" id="loading">
+  <div class="loading-logo">Vitalis Farma</div>
+  <div class="loading-bar"><div class="loading-bar-inner"></div></div>
+</div>
+
+<header class="header" id="header">
+  <div class="container">
+    <a href="../index.html" class="header-logo">
+      <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#0f172a"/><path d="M16 8v16M8 16h16" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+      Vitalis Farma
+    </a>
+    <button class="mobile-btn" id="mobileBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav">
+      <a href="../index.html" class="nav-link">Inicio</a>
+      <a href="sobre.html" class="nav-link">Sobre</a>
+      <a href="servicos.html" class="nav-link">Servicos</a>
+      <a href="produtos.html" class="nav-link active">Produtos</a>
+      <a href="contato.html" class="nav-link">Contato</a>
+      <a href="contato.html" class="nav-link nav-cta">Fale Conosco</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-header">
+    <div class="container">
+      <div class="page-breadcrumb">
+        <a href="../index.html">Inicio</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Produtos</span>
+      </div>
+      <h1 class="page-title">Nossos Produtos</h1>
+      <p style="color:var(--gray-700);max-width:560px;margin:0 auto;">Medicamentos, dermocosmeticos, vitaminas e muito mais para cuidar de voce.</p>
+      <div style="max-width:400px;margin:var(--space-7) auto 0;position:relative;">
+        <input type="text" id="productSearch" class="form-input" placeholder="Buscar produtos..." style="padding-left:44px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--gray-600)" stroke-width="2" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:16px;height:16px"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorias -->
+  <section class="section" style="padding-bottom:0;">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom:var(--space-7);">
+        <span class="section-label">Categorias</span>
+        <h2 class="section-title">Encontre o que precisa</h2>
+      </div>
+      <div class="grid grid-auto reveal" style="gap:var(--space-4);">
+        <a href="#" class="card" style="text-align:center;padding:var(--space-5);display:flex;flex-direction:column;align-items:center;gap:var(--space-3);text-decoration:none;color:inherit;" onclick="event.preventDefault();filtrar('Medicamentos')">
+          <div class="card-icon" style="margin:0;background:var(--gray-200);width:40px;height:40px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1.5" style="width:20px;height:20px"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 12h6"/><path d="M12 9v6"/></svg></div>
+          <h4 style="font-family:var(--font-heading);font-size:var(--text-sm);font-weight:600;">Medicamentos</h4>
+        </a>
+        <a href="#" class="card" style="text-align:center;padding:var(--space-5);display:flex;flex-direction:column;align-items:center;gap:var(--space-3);text-decoration:none;color:inherit;" onclick="event.preventDefault();filtrar('Dermocosmeticos')">
+          <div class="card-icon" style="margin:0;background:var(--gray-200);width:40px;height:40px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1.5" style="width:20px;height:20px"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83"/></svg></div>
+          <h4 style="font-family:var(--font-heading);font-size:var(--text-sm);font-weight:600;">Dermocosmeticos</h4>
+        </a>
+        <a href="#" class="card" style="text-align:center;padding:var(--space-5);display:flex;flex-direction:column;align-items:center;gap:var(--space-3);text-decoration:none;color:inherit;" onclick="event.preventDefault();filtrar('Vitaminas')">
+          <div class="card-icon" style="margin:0;background:var(--gray-200);width:40px;height:40px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1.5" style="width:20px;height:20px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h4 style="font-family:var(--font-heading);font-size:var(--text-sm);font-weight:600;">Vitaminas</h4>
+        </a>
+        <a href="#" class="card" style="text-align:center;padding:var(--space-5);display:flex;flex-direction:column;align-items:center;gap:var(--space-3);text-decoration:none;color:inherit;" onclick="event.preventDefault();filtrar('Higiene')">
+          <div class="card-icon" style="margin:0;background:var(--gray-200);width:40px;height:40px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1.5" style="width:20px;height:20px"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <h4 style="font-family:var(--font-heading);font-size:var(--text-sm);font-weight:600;">Higiene</h4>
+        </a>
+        <a href="#" class="card" style="text-align:center;padding:var(--space-5);display:flex;flex-direction:column;align-items:center;gap:var(--space-3);text-decoration:none;color:inherit;" onclick="event.preventDefault();filtrar('Infantil')">
+          <div class="card-icon" style="margin:0;background:var(--gray-200);width:40px;height:40px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1.5" style="width:20px;height:20px"><path d="M12 2a8 8 0 0 0-8 8v2a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4v-2a8 8 0 0 0-8-8z"/><path d="M12 16v4"/></svg></div>
+          <h4 style="font-family:var(--font-heading);font-size:var(--text-sm);font-weight:600;">Infantil</h4>
+        </a>
+        <a href="#" class="card" style="text-align:center;padding:var(--space-5);display:flex;flex-direction:column;align-items:center;gap:var(--space-3);text-decoration:none;color:inherit;" onclick="event.preventDefault();filtrar('Genericos')">
+          <div class="card-icon" style="margin:0;background:var(--gray-200);width:40px;height:40px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1.5" style="width:20px;height:20px"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></div>
+          <h4 style="font-family:var(--font-heading);font-size:var(--text-sm);font-weight:600;">Genericos</h4>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Listagem -->
+  <section class="section" style="padding-top:var(--space-8);">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom:var(--space-7);">
+        <span class="section-label">Produtos</span>
+        <h2 class="section-title">Confira nossos destaque</h2>
+      </div>
+      <div class="grid grid-3 reveal" id="productGrid">
+        <article class="card product-card" data-cat="Medicamentos">
+          <div class="product-card-img"><span class="product-card-badge">Destaque</span><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 12h6"/><path d="M12 9v6"/></svg></div>
+          <span class="product-card-category">Medicamentos</span>
+          <h3 class="product-card-name">Paracetamol 750mg</h3>
+          <p class="product-card-principle">Paracetamol</p>
+          <p class="product-card-desc">Analgesico e antitérmico para dores leves a moderadas e febre.</p>
+          <div class="product-card-footer">
+            <div><div class="product-card-price">R$ 15,90</div><span class="product-card-stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Em estoque</span></div>
+            <button class="btn btn-primary btn-sm btn-icon" onclick="cart.add({id:1,nome:'Paracetamol 750mg',preco:15.90})" aria-label="Adicionar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card product-card" data-cat="Medicamentos">
+          <div class="product-card-img"><span class="product-card-badge">Receita</span><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 12h6"/></svg></div>
+          <span class="product-card-category">Medicamentos</span>
+          <h3 class="product-card-name">Amoxicilina 500mg</h3>
+          <p class="product-card-principle">Amoxicilina</p>
+          <p class="product-card-desc">Antibiotico de amplo espectro para infeccoes bacterianas.</p>
+          <div class="product-card-footer">
+            <div><div class="product-card-price">R$ 32,50</div><span class="product-card-stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Em estoque</span></div>
+            <button class="btn btn-primary btn-sm btn-icon" onclick="cart.add({id:3,nome:'Amoxicilina 500mg',preco:32.50})" aria-label="Adicionar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card product-card" data-cat="Dermocosmeticos">
+          <div class="product-card-img"><span class="product-card-badge">Dermocosmetico</span><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83"/></svg></div>
+          <span class="product-card-category">Dermocosmeticos</span>
+          <h3 class="product-card-name">Protetor Solar FPS 60</h3>
+          <p class="product-card-principle">Filtros solares</p>
+          <p class="product-card-desc">Protecao solar de alta performance com textura leve.</p>
+          <div class="product-card-footer">
+            <div><div class="product-card-price">R$ 89,90</div><span class="product-card-stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Em estoque</span></div>
+            <button class="btn btn-primary btn-sm btn-icon" onclick="cart.add({id:4,nome:'Protetor Solar FPS 60',preco:89.90})" aria-label="Adicionar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card product-card" data-cat="Dermocosmeticos">
+          <div class="product-card-img"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <span class="product-card-category">Dermocosmeticos</span>
+          <h3 class="product-card-name">Hidratante Facial 50ml</h3>
+          <p class="product-card-principle">Acido Hialuronico</p>
+          <p class="product-card-desc">Hidratacao intensa com acao antissinais.</p>
+          <div class="product-card-footer">
+            <div><div class="product-card-price">R$ 129,90</div><span class="product-card-stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Em estoque</span></div>
+            <button class="btn btn-primary btn-sm btn-icon" onclick="cart.add({id:5,nome:'Hidratante Facial 50ml',preco:129.90})" aria-label="Adicionar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card product-card" data-cat="Vitaminas">
+          <div class="product-card-img"><span class="product-card-badge">Destaque</span><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <span class="product-card-category">Vitaminas</span>
+          <h3 class="product-card-name">Vitamina C 1000mg</h3>
+          <p class="product-card-principle">Acido Ascorbico</p>
+          <p class="product-card-desc">Suplemento antioxidante para fortalecimento imunologico.</p>
+          <div class="product-card-footer">
+            <div><div class="product-card-price">R$ 45,90</div><span class="product-card-stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Em estoque</span></div>
+            <button class="btn btn-primary btn-sm btn-icon" onclick="cart.add({id:6,nome:'Vitamina C 1000mg',preco:45.90})" aria-label="Adicionar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card product-card" data-cat="Vitaminas">
+          <div class="product-card-img"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <span class="product-card-category">Vitaminas</span>
+          <h3 class="product-card-name">Omega 3 1000mg</h3>
+          <p class="product-card-principle">Oleo de Peixe</p>
+          <p class="product-card-desc">Acidos graxos essenciais para saude cardiovascular.</p>
+          <div class="product-card-footer">
+            <div><div class="product-card-price">R$ 67,90</div><span class="product-card-stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Em estoque</span></div>
+            <button class="btn btn-primary btn-sm btn-icon" onclick="cart.add({id:7,nome:'Omega 3 1000mg',preco:67.90})" aria-label="Adicionar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card product-card" data-cat="Higiene">
+          <div class="product-card-img"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <span class="product-card-category">Higiene</span>
+          <h3 class="product-card-name">Sabonete Antiseptico 250ml</h3>
+          <p class="product-card-principle">Clorexidina</p>
+          <p class="product-card-desc">Sabonete liquido com acao antimicrobiana.</p>
+          <div class="product-card-footer">
+            <div><div class="product-card-price">R$ 22,90</div><span class="product-card-stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Em estoque</span></div>
+            <button class="btn btn-primary btn-sm btn-icon" onclick="cart.add({id:8,nome:'Sabonete Antiseptico 250ml',preco:22.90})" aria-label="Adicionar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card product-card" data-cat="Genericos">
+          <div class="product-card-img"><span class="product-card-badge">Generico</span><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 12h6"/></svg></div>
+          <span class="product-card-category">Genericos</span>
+          <h3 class="product-card-name">Losartana Potassica 50mg</h3>
+          <p class="product-card-principle">Losartana</p>
+          <p class="product-card-desc">Anti-hipertensivo generico para hipertensao arterial.</p>
+          <div class="product-card-footer">
+            <div><div class="product-card-price">R$ 18,90</div><span class="product-card-stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Em estoque</span></div>
+            <button class="btn btn-primary btn-sm btn-icon" onclick="cart.add({id:9,nome:'Losartana Potassica 50mg',preco:18.90})" aria-label="Adicionar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="white"/><path d="M16 8v16M8 16h16" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/></svg>Vitalis Farma</div>
+        <p class="footer-desc">Sua saude em primeiro lugar.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Paginas</h4>
+        <div class="footer-links">
+          <a href="../index.html">Inicio</a><a href="sobre.html">Sobre</a><a href="servicos.html">Servicos</a><a href="produtos.html">Produtos</a><a href="contato.html">Contato</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Categorias</h4>
+        <div class="footer-links">
+          <a href="#">Medicamentos</a><a href="#">Dermocosmeticos</a><a href="#">Vitaminas</a><a href="#">Higiene</a><a href="#">Genericos</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contato</h4>
+        <div class="footer-links">
+          <a href="#">Av. das Nacoes Unidas, 1234</a>
+          <a href="tel:+551130000000">(11) 3000-0000</a>
+          <a href="mailto:contato@vitalisfarma.com.br">contato@vitalisfarma.com.br</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Vitalis Farma</span>
+      <div><a href="#" style="margin-right:var(--space-5);">Privacidade</a><a href="#">Termos</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Voltar ao topo">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="../js/main.js"></script>
+<script>
+function filtrar(cat) {
+  document.querySelectorAll('[data-cat]').forEach(c => {
+    c.style.display = c.getAttribute('data-cat') === cat ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

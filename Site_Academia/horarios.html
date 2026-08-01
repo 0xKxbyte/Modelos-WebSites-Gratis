@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IRON GYM - A academia mais completa da cidade. Musculacao, crossfit, funcional e muito mais. Venha transformar seu corpo!">
+    <meta name="keywords" content="academia, musculacao, crossfit, fitness, treino, iron gym">
+    <meta name="author" content="Iron Gym">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <title>IRON GYM - Horarios - Academia Profissional</title>
+</head>
+<body>
+
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+
+<canvas id="particles-canvas"></canvas>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="index.html" class="logo">
+            <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="18" width="8" height="12" rx="2" fill="#0066ff"/>
+                <rect x="36" y="18" width="8" height="12" rx="2" fill="#0066ff"/>
+                <rect x="14" y="8" width="6" height="32" rx="3" fill="#ffffff"/>
+                <rect x="28" y="8" width="6" height="32" rx="3" fill="#ffffff"/>
+                <rect x="8" y="8" width="32" height="6" rx="3" fill="#ffffff"/>
+                <rect x="8" y="34" width="32" height="6" rx="3" fill="#ffffff"/>
+                <circle cx="24" cy="24" r="4" fill="#0066ff"/>
+            </svg>
+            <div class="logo-text">IRON <span>GYM</span></div>
+        </a>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="horarios.html" class="active">Horarios</a>
+            <a href="contato.html">Contato</a>
+            <a href="contato.html" class="cta-btn">Matricule-se</a>
+        </nav>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+<div class="timer-bar">
+    <div class="timer-inner">
+        <span class="timer-label"><strong>PROMOCAO FORTE</strong> &mdash; tempo limitado</span>
+        <div class="timer-display">
+            <div class="timer-block">
+                <span class="num" id="timer-hours">24</span>
+                <span class="label">Horas</span>
+            </div>
+            <span class="timer-sep">:</span>
+            <div class="timer-block">
+                <span class="num" id="timer-minutes">59</span>
+                <span class="label">Minutos</span>
+            </div>
+            <span class="timer-sep">:</span>
+            <div class="timer-block">
+                <span class="num" id="timer-seconds">59</span>
+                <span class="label">Segundos</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+
+<section class="section" style="padding-top:60px;padding-bottom:40px;">
+    <div class="container">
+        <div class="section-header reveal" style="text-align:left;max-width:800px;">
+            <div class="section-tag">
+                <span class="line"></span>
+                Horarios
+            </div>
+            <h1 class="section-title">Grade de <span>Aulas</span></h1>
+            <p class="section-desc" style="margin:0;">Confira nossa grade completa de aulas e horarios. Todas as modalidades para todos os niveis.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+    <div class="container">
+        <div style="overflow-x:auto;">
+            <table class="schedule-table reveal">
+                <thead>
+                    <tr>
+                        <th>Horario</th>
+                        <th>Segunda</th>
+                        <th>Terca</th>
+                        <th>Quarta</th>
+                        <th>Quinta</th>
+                        <th>Sexta</th>
+                        <th>Sabado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>06:00 - 07:00</td>
+                        <td><span class="class-name">Crossfit</span><br><span class="class-badge advanced">Avancado</span></td>
+                        <td><span class="class-name">Funcional</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Crossfit</span><br><span class="class-badge advanced">Avancado</span></td>
+                        <td><span class="class-name">Funcional</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Crossfit</span><br><span class="class-badge advanced">Avancado</span></td>
+                        <td><span class="class-name">Spinning</span><br><span class="class-badge beginner">Iniciante</span></td>
+                    </tr>
+                    <tr>
+                        <td>07:00 - 08:00</td>
+                        <td><span class="class-name">Musculacao</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td><span class="class-name">Pilates</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td><span class="class-name">Musculacao</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td><span class="class-name">Pilates</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td><span class="class-name">Musculacao</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td><span class="class-name">Yoga</span><br><span class="class-badge beginner">Iniciante</span></td>
+                    </tr>
+                    <tr>
+                        <td>08:00 - 09:00</td>
+                        <td><span class="class-name">Yoga</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td><span class="class-name">Crossfit</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Yoga</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td><span class="class-name">Crossfit</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Funcional</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Funcional</span><br><span class="class-badge beginner">Iniciante</span></td>
+                    </tr>
+                    <tr>
+                        <td>09:00 - 10:00</td>
+                        <td><span class="class-name">Funcional</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Musculacao</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Spinning</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Musculacao</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Pilates</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Crossfit</span><br><span class="class-badge advanced">Avancado</span></td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 11:00</td>
+                        <td><span class="class-name">Pilates</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td><span class="class-name">Spinning</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Funcional</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Spinning</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Crossfit</span><br><span class="class-badge advanced">Avancado</span></td>
+                        <td><span class="class-name">Musculacao</span><br><span class="class-badge beginner">Iniciante</span></td>
+                    </tr>
+                    <tr>
+                        <td>12:00 - 13:00</td>
+                        <td><span class="class-name">Crossfit</span><br><span class="class-badge advanced">Avancado</span></td>
+                        <td><span class="class-name">Funcional</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Crossfit</span><br><span class="class-badge advanced">Avancado</span></td>
+                        <td><span class="class-name">Funcional</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Spinning</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>14:00 - 15:00</td>
+                        <td><span class="class-name">Yoga</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td><span class="class-name">Pilates</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Yoga</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td><span class="class-name">Pilates</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Yoga</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>16:00 - 17:00</td>
+                        <td><span class="class-name">Funcional</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td><span class="class-name">Musculacao</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td><span class="class-name">Funcional</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td><span class="class-name">Musculacao</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td><span class="class-name">Funcional</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>17:00 - 18:00</td>
+                        <td><span class="class-name">Crossfit</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Spinning</span><br><span class="class-badge advanced">Avancado</span></td>
+                        <td><span class="class-name">Crossfit</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Spinning</span><br><span class="class-badge advanced">Avancado</span></td>
+                        <td><span class="class-name">Crossfit</span><br><span class="class-badge advanced">Avancado</span></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>18:00 - 19:00</td>
+                        <td><span class="class-name">Musculacao</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Crossfit</span><br><span class="class-badge advanced">Avancado</span></td>
+                        <td><span class="class-name">Musculacao</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Crossfit</span><br><span class="class-badge advanced">Avancado</span></td>
+                        <td><span class="class-name">Musculacao</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>19:00 - 20:00</td>
+                        <td><span class="class-name">Spinning</span><br><span class="class-badge advanced">Avancado</span></td>
+                        <td><span class="class-name">Yoga</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td><span class="class-name">Spinning</span><br><span class="class-badge advanced">Avancado</span></td>
+                        <td><span class="class-name">Yoga</span><br><span class="class-badge beginner">Iniciante</span></td>
+                        <td><span class="class-name">Pilates</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>20:00 - 21:00</td>
+                        <td><span class="class-name">Pilates</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Funcional</span><br><span class="class-badge advanced">Avancado</span></td>
+                        <td><span class="class-name">Pilates</span><br><span class="class-badge intermediate">Intermediario</span></td>
+                        <td><span class="class-name">Funcional</span><br><span class="class-badge advanced">Avancado</span></td>
+                        <td><span class="class-name">Funcional</span><br><span class="class-badge advanced">Avancado</span></td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background:var(--black-2);">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-tag">
+                <span class="line"></span>
+                Observacoes
+                <span class="line"></span>
+            </div>
+            <h2 class="section-title">Informacoes <span>Importantes</span></h2>
+        </div>
+        <div class="features-grid" style="max-width:900px;margin:0 auto;">
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <circle cx="32" cy="32" r="24" stroke="#0066ff" stroke-width="2.5"/>
+                        <path d="M32 20v12l8 8" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Horario de Funcionamento</h3>
+                <p>Segunda a Sexta: 05:30 as 22:00<br>Sabado: 07:00 as 14:00<br>Domingo: Fechado</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <rect x="8" y="12" width="48" height="40" rx="4" stroke="#ffffff" stroke-width="2.5"/>
+                        <text x="32" y="42" text-anchor="middle" fill="#0066ff" font-size="28" font-weight="700" font-family="Oswald">!</text>
+                    </svg>
+                </div>
+                <h3>Regras Importantes</h3>
+                <p>Use roupas adequadas e leve sua toalha. Chegue com 10 min de antecedencia para aulas coletivas.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <circle cx="32" cy="20" r="8" stroke="#ffffff" stroke-width="2.5"/>
+                        <path d="M16 52c0-8.84 7.16-16 16-16s16 7.16 16 16" stroke="#0066ff" stroke-width="2.5"/>
+                    </svg>
+                </div>
+                <h3>Aulas Experimentais</h3>
+                <p>Oferecemos aulas experimentais gratuitas para novos alunos. Consulte a modalidade desejada.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div><!-- main-content -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <a href="index.html" class="logo" style="margin-bottom:16px;display:inline-flex;">
+                    <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;">
+                        <rect x="4" y="18" width="8" height="12" rx="2" fill="#0066ff"/>
+                        <rect x="36" y="18" width="8" height="12" rx="2" fill="#0066ff"/>
+                        <rect x="14" y="8" width="6" height="32" rx="3" fill="#ffffff"/>
+                        <rect x="28" y="8" width="6" height="32" rx="3" fill="#ffffff"/>
+                        <rect x="8" y="8" width="32" height="6" rx="3" fill="#ffffff"/>
+                        <rect x="8" y="34" width="32" height="6" rx="3" fill="#ffffff"/>
+                        <circle cx="24" cy="24" r="4" fill="#0066ff"/>
+                    </svg>
+                    <div class="logo-text" style="font-size:22px;">IRON <span>GYM</span></div>
+                </a>
+                <p>A Iron Gym e a academia mais completa e moderna da cidade. Equipamentos de ultima geracao, profissionais qualificados e uma estrutura pensada para o seu melhor desempenho.</p>
+            </div>
+            <div>
+                <h4>Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="horarios.html">Horarios</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Modalidades</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#modalidades">Musculacao</a></li>
+                    <li><a href="index.html#modalidades">Crossfit</a></li>
+                    <li><a href="index.html#modalidades">Funcional</a></li>
+                    <li><a href="index.html#modalidades">Yoga</a></li>
+                    <li><a href="index.html#modalidades">Pilates</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <ul class="footer-links">
+                    <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+                    <li><a href="mailto:contato@irongym.com.br">contato@irongym.com.br</a></li>
+                    <li>Av. Paulista, 1000</li>
+                    <li>Sao Paulo - SP, 01310-100</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Iron Gym. Todos os direitos reservados.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="#" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                </a>
+                <a href="#" aria-label="YouTube">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+                </a>
+                <a href="#" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

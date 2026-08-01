@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Produtos - TechStore Pro</title>
+    <script>if(!localStorage.getItem('auth_gate')){window.location.href='../login-gate.html'}</script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236C3CF5'/%3E%3Cpath d='M16 6L6 12v8l10 6 10-6v-8L16 6z' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='white'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+</head>
+<body>
+    <div id="toast-container" class="toast-container"></div>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#logoGrad)"/><path d="M20 8L10 14v12l10 6 10-6V14L20 8z" stroke="white" stroke-width="2.5" fill="none"/><circle cx="20" cy="20" r="5" fill="white"/><defs><linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#6C3CF5"/><stop offset="100%" stop-color="#E94560"/></linearGradient></defs></svg>
+                <span>TechStore</span>
+            </a>
+            <div class="search-bar">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" id="search-input" placeholder="Buscar produtos..." autocomplete="off">
+            </div>
+            <div class="header-actions">
+                <button class="action-btn" onclick="window.location.href='cart.html'">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    <span class="badge cart-badge" style="display:none;">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="product-page">
+        <div class="container">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:32px;">
+                <h1 class="section-title gradient-text" id="search-title">Resultados da Busca</h1>
+                <div style="display:flex;gap:12px;align-items:center;">
+                    <label style="color:var(--gray-400);font-size:0.85rem;">Ordenar por:</label>
+                    <select id="sort-select" style="padding:8px 16px;border-radius:var(--radius-full);border:1.5px solid var(--glass-border);background:var(--dark-2);color:var(--gray-100);" onchange="applySort()">
+                        <option value="destaque">Destaque</option>
+                        <option value="preco_asc">Menor Preco</option>
+                        <option value="preco_desc">Maior Preco</option>
+                        <option value="nome">Nome A-Z</option>
+                    </select>
+                </div>
+            </div>
+            <div style="display:grid;grid-template-columns:250px 1fr;gap:32px;">
+                <div style="background:var(--dark-2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:24px;height:fit-content;">
+                    <h4 style="margin-bottom:20px;">Filtros</h4>
+                    <div style="margin-bottom:20px;">
+                        <h5 style="font-size:0.85rem;color:var(--gray-300);margin-bottom:12px;">Preco Maximo</h5>
+                        <input type="range" id="price-range" min="0" max="25000" value="25000" step="500" style="width:100%;" oninput="document.getElementById('price-value').textContent='Ate R$ '+parseInt(this.value).toLocaleString('pt-BR');applyFilters()">
+                        <div style="display:flex;justify-content:space-between;font-size:0.75rem;color:var(--gray-400);margin-top:8px;">
+                            <span>Ate R$ <span id="price-value">25.000</span></span>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 style="font-size:0.85rem;color:var(--gray-300);margin-bottom:12px;">Categorias</h5>
+                        <div style="display:flex;flex-direction:column;gap:8px;">
+                            <label style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--gray-400);cursor:pointer;">
+                                <input type="checkbox" class="category-filter" value="computadores" checked> Computadores
+                            </label>
+                            <label style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--gray-400);cursor:pointer;">
+                                <input type="checkbox" class="category-filter" value="notebooks" checked> Notebooks
+                            </label>
+                            <label style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--gray-400);cursor:pointer;">
+                                <input type="checkbox" class="category-filter" value="hardware" checked> Hardware
+                            </label>
+                            <label style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--gray-400);cursor:pointer;">
+                                <input type="checkbox" class="category-filter" value="perifericos" checked> Perifericos
+                            </label>
+                            <label style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--gray-400);cursor:pointer;">
+                                <input type="checkbox" class="category-filter" value="celulares" checked> Celulares
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="products-grid" id="search-grid"></div>
+                    <div id="search-no-results" style="display:none;text-align:center;padding:60px;">
+                        <p style="color:var(--gray-400);">Nenhum produto encontrado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/favorites.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script>
+        const ALL_PRODUCTS = [
+            { id: 1, nome: 'PC Gamer Titan X', slug: 'pc-gamer-titan-x', descricao: 'PC Gamer de alta performance com Intel Core i9-14900K, 32GB DDR5, RTX 4090, SSD 1TB NVMe.', categoria: 'computadores', preco: 15999.99, preco_promocional: 13999.99, imagens: ['https://placehold.co/280x280/1a1a2e/e94560?text=PC+Gamer+Titan+X'], parcelas: 12 },
+            { id: 2, nome: 'PC Workstation Pro', slug: 'pc-workstation-pro', descricao: 'Workstation profissional AMD Ryzen 9, 64GB RAM, RTX 4080.', categoria: 'computadores', preco: 21999.99, preco_promocional: 19999.99, imagens: ['https://placehold.co/280x280/16213e/0f3460?text=Workstation+Pro'], parcelas: 12 },
+            { id: 3, nome: 'Notebook UltraBook Pro 15', slug: 'notebook-ultrabook-pro-15', descricao: 'Notebook ultrafino 15.6 4K OLED, Intel Core i7, 16GB RAM.', categoria: 'notebooks', preco: 8499.99, preco_promocional: 7799.99, imagens: ['https://placehold.co/280x280/0f3460/e94560?text=UltraBook+Pro'], parcelas: 12 },
+            { id: 4, nome: 'RTX 5090 Phantom', slug: 'rtx-5090-phantom', descricao: 'Placa de video NVIDIA GeForce RTX 5090 32GB GDDR7.', categoria: 'hardware', preco: 12999.99, preco_promocional: 11999.99, imagens: ['https://placehold.co/280x280/e94560/1a1a2e?text=RTX+5090'], parcelas: 12 },
+            { id: 5, nome: 'Intel Core i9-14900K', slug: 'intel-core-i9-14900k', descricao: 'Processador 24 nucleos, 32 threads.', categoria: 'hardware', preco: 4299.99, preco_promocional: 3899.99, imagens: ['https://placehold.co/280x280/1a1a2e/0f3460?text=i9-14900K'], parcelas: 10 },
+            { id: 6, nome: 'Teclado Mecanico RGB Phantom', slug: 'teclado-mecanico-rgb-phantom', descricao: 'Teclado mecanico Cherry MX.', categoria: 'perifericos', preco: 599.99, preco_promocional: 499.99, imagens: ['https://placehold.co/280x280/16213e/e94560?text=Teclado+Phantom'], parcelas: 6 },
+            { id: 7, nome: 'Mouse Gamer Pro X', slug: 'mouse-gamer-pro-x', descricao: 'Mouse sem fio 32K DPI.', categoria: 'perifericos', preco: 399.99, preco_promocional: 349.99, imagens: ['https://placehold.co/280x280/e94560/16213e?text=Mouse+Pro+X'], parcelas: 6 },
+            { id: 8, nome: 'Smartphone Galaxy Ultra 25', slug: 'smartphone-galaxy-ultar-25', descricao: 'Smartphone 6.9 AMOLED, 512GB.', categoria: 'celulares', preco: 7999.99, preco_promocional: 7299.99, imagens: ['https://placehold.co/280x280/0f3460/1a1a2e?text=Galaxy+Ultra'], parcelas: 12 },
+            { id: 9, nome: 'Kit Tecnico Profissional', slug: 'kit-tecnico-profissional', descricao: 'Kit 150 ferramentas.', categoria: 'kit-tecnico', preco: 299.99, preco_promocional: 249.99, imagens: ['https://placehold.co/280x280/16213e/0f3460?text=Kit+Tecnico'], parcelas: 5 },
+            { id: 10, nome: 'Kit Limpeza Eletronicos', slug: 'kit-limpeza-eletronicos-pro', descricao: 'Kit limpeza completo.', categoria: 'limpeza', preco: 89.99, preco_promocional: 69.99, imagens: ['https://placehold.co/280x280/e94560/0f3460?text=Kit+Limpeza'], parcelas: 3 },
+            { id: 11, nome: 'Monitor 32 4K HDR1000', slug: 'monitor-32-4k-hdr1000', descricao: 'Monitor 32 4K, 144Hz.', categoria: 'monitores', preco: 4999.99, preco_promocional: 4499.99, imagens: ['https://placehold.co/280x280/1a1a2e/e94560?text=Monitor+32+4K'], parcelas: 12 },
+            { id: 12, nome: 'SSD NVMe 2TB SpeedForce', slug: 'ssd-nvme-2tb-speedforce', descricao: 'SSD NVMe PCIe 5.0.', categoria: 'hardware', preco: 1599.99, preco_promocional: 1399.99, imagens: ['https://placehold.co/280x280/0f3460/e94560?text=SSD+2TB'], parcelas: 8 }
+        ];
+
+        let filteredProducts = [...ALL_PRODUCTS];
+
+        function initSearch() {
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q') || '';
+            const cat = params.get('cat') || '';
+
+            if (query) {
+                document.getElementById('search-input').value = query;
+                document.getElementById('search-title').textContent = 'Resultados para: "' + query + '"';
+                filteredProducts = ALL_PRODUCTS.filter(p =>
+                    p.nome.toLowerCase().includes(query.toLowerCase()) ||
+                    p.descricao.toLowerCase().includes(query.toLowerCase())
+                );
+            } else if (cat) {
+                document.getElementById('search-title').textContent = 'Categoria: ' + cat;
+                filteredProducts = ALL_PRODUCTS.filter(p => p.categoria === cat);
+            } else {
+                document.getElementById('search-title').textContent = 'Todos os Produtos';
+            }
+
+            document.getElementById('search-input').addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    const q = e.target.value.trim();
+                    if (q) window.location.href = 'search.html?q=' + encodeURIComponent(q);
+                }
+            });
+
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const maxPrice = parseInt(document.getElementById('price-range').value);
+            const checkedCats = Array.from(document.querySelectorAll('.category-filter:checked')).map(cb => cb.value);
+
+            let results = filteredProducts.filter(p => {
+                const price = p.preco_promocional || p.preco;
+                return price <= maxPrice && checkedCats.includes(p.categoria);
+            });
+
+            applySortResults(results);
+        }
+
+        function applySort() {
+            const sort = document.getElementById('sort-select').value;
+            applyFilters();
+        }
+
+        function applySortResults(results) {
+            const sort = document.getElementById('sort-select').value;
+            switch (sort) {
+                case 'preco_asc': results.sort((a, b) => (a.preco_promocional || a.preco) - (b.preco_promocional || b.preco)); break;
+                case 'preco_desc': results.sort((a, b) => (b.preco_promocional || b.preco) - (a.preco_promocional || a.preco)); break;
+                case 'nome': results.sort((a, b) => a.nome.localeCompare(b.nome)); break;
+                default: results.sort((a, b) => b.id - a.id); break;
+            }
+            renderResults(results);
+        }
+
+        function renderResults(results) {
+            const grid = document.getElementById('search-grid');
+            const noResults = document.getElementById('search-no-results');
+
+            if (results.length === 0) {
+                grid.innerHTML = '';
+                noResults.style.display = 'block';
+                return;
+            }
+            noResults.style.display = 'none';
+
+            grid.innerHTML = results.map(p => {
+                const price = p.preco_promocional || p.preco;
+                const oldPrice = p.preco_promocional ? p.preco : null;
+                const parcela = (price / (p.parcelas || 12)).toFixed(2);
+                return `
+                    <div class="product-card" data-id="${p.id}" data-category="${p.categoria}" data-price="${price}">
+                        <div class="product-image">
+                            <img src="${p.imagens[0]}" alt="${p.nome}" loading="lazy">
+                            <div class="product-actions">
+                                <button class="fav-btn" data-id="${p.id}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+                            </div>
+                            ${p.preco_promocional ? '<div class="product-badge promocao">Promocao</div>' : ''}
+                        </div>
+                        <div class="product-info">
+                            <a href="product.html?slug=${p.slug}"><h3>${p.nome}</h3></a>
+                            <p class="product-desc">${p.descricao.substring(0, 60)}...</p>
+                            <div class="product-price-row">
+                                <div class="product-price">
+                                    ${oldPrice ? `<span class="old-price">R$ ${oldPrice.toFixed(2).replace('.', ',')}</span>` : ''}
+                                    <span class="current-price">R$ ${price.toFixed(2).replace('.', ',')}</span>
+                                    <span class="installments">${p.parcelas}x de R$ ${parcela.replace('.', ',')} sem juros</span>
+                                </div>
+                                <button class="btn-buy" onclick="Cart.add(${p.id})">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            setTimeout(() => Favorites.updateButtons(), 100);
+        }
+
+        document.addEventListener('DOMContentLoaded', initSearch);
+    </script>
+</body>
+</html>

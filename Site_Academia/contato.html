@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IRON GYM - A academia mais completa da cidade. Musculacao, crossfit, funcional e muito mais. Venha transformar seu corpo!">
+    <meta name="keywords" content="academia, musculacao, crossfit, fitness, treino, iron gym">
+    <meta name="author" content="Iron Gym">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <title>IRON GYM - Contato - Academia Profissional</title>
+</head>
+<body>
+
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+
+<canvas id="particles-canvas"></canvas>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="index.html" class="logo">
+            <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="18" width="8" height="12" rx="2" fill="#0066ff"/>
+                <rect x="36" y="18" width="8" height="12" rx="2" fill="#0066ff"/>
+                <rect x="14" y="8" width="6" height="32" rx="3" fill="#ffffff"/>
+                <rect x="28" y="8" width="6" height="32" rx="3" fill="#ffffff"/>
+                <rect x="8" y="8" width="32" height="6" rx="3" fill="#ffffff"/>
+                <rect x="8" y="34" width="32" height="6" rx="3" fill="#ffffff"/>
+                <circle cx="24" cy="24" r="4" fill="#0066ff"/>
+            </svg>
+            <div class="logo-text">IRON <span>GYM</span></div>
+        </a>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="horarios.html">Horarios</a>
+            <a href="contato.html" class="active">Contato</a>
+            <a href="contato.html" class="cta-btn">Matricule-se</a>
+        </nav>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+<div class="timer-bar">
+    <div class="timer-inner">
+        <span class="timer-label"><strong>PROMOCAO FORTE</strong> &mdash; tempo limitado</span>
+        <div class="timer-display">
+            <div class="timer-block">
+                <span class="num" id="timer-hours">24</span>
+                <span class="label">Horas</span>
+            </div>
+            <span class="timer-sep">:</span>
+            <div class="timer-block">
+                <span class="num" id="timer-minutes">59</span>
+                <span class="label">Minutos</span>
+            </div>
+            <span class="timer-sep">:</span>
+            <div class="timer-block">
+                <span class="num" id="timer-seconds">59</span>
+                <span class="label">Segundos</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+
+<section class="section" style="padding-top:60px;padding-bottom:40px;">
+    <div class="container">
+        <div class="section-header reveal" style="text-align:left;max-width:800px;">
+            <div class="section-tag">
+                <span class="line"></span>
+                Contato
+            </div>
+            <h1 class="section-title">Fale <span>Conosco</span></h1>
+            <p class="section-desc" style="margin:0;">Tire suas duvidas, agende uma visita ou solicite mais informacoes.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-form reveal">
+                <form id="contactForm" action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+                        </div>
+                        <div class="form-group">
+                            <label for="interesse">Interesse</label>
+                            <select id="interesse" name="interesse">
+                                <option value="">Selecione...</option>
+                                <option value="musculacao">Musculacao</option>
+                                <option value="crossfit">Crossfit</option>
+                                <option value="funcional">Funcional</option>
+                                <option value="yoga">Yoga</option>
+                                <option value="pilates">Pilates</option>
+                                <option value="personal">Personal Trainer</option>
+                                <option value="matricula">Matricula</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" required placeholder="Digite sua mensagem..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                        Enviar Mensagem
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="contact-info reveal">
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="1.5">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <div>
+                        <h4>Endereco</h4>
+                        <p>Av. Paulista, 1000<br>Sao Paulo - SP, 01310-100</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="1.5">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                    <div>
+                        <h4>Telefone</h4>
+                        <p><a href="tel:+5511999999999">(11) 99999-9999</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="1.5">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <div>
+                        <h4>E-mail</h4>
+                        <p><a href="mailto:contato@irongym.com.br">contato@irongym.com.br</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <div>
+                        <h4>Funcionamento</h4>
+                        <p>Seg-Sex: 05:30 - 22:00<br>Sab: 07:00 - 14:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background:var(--black-2);">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-tag">
+                <span class="line"></span>
+                Localizacao
+                <span class="line"></span>
+            </div>
+            <h2 class="section-title">Onde <span>Estamos</span></h2>
+            <p class="section-desc">Estamos em uma localizacao privilegiada, de facil acesso.</p>
+        </div>
+        <div class="map-container reveal">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1974908889843!2d-46.6490!3d-23.5610!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8f0e5b3c1%3A0x8f0e5b3c1a2b3c4d!2sAv.+Paulista%2C+1000!5e0!3m2!1spt-BR!2sbr!4v1" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</section>
+
+</div><!-- main-content -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <a href="index.html" class="logo" style="margin-bottom:16px;display:inline-flex;">
+                    <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;">
+                        <rect x="4" y="18" width="8" height="12" rx="2" fill="#0066ff"/>
+                        <rect x="36" y="18" width="8" height="12" rx="2" fill="#0066ff"/>
+                        <rect x="14" y="8" width="6" height="32" rx="3" fill="#ffffff"/>
+                        <rect x="28" y="8" width="6" height="32" rx="3" fill="#ffffff"/>
+                        <rect x="8" y="8" width="32" height="6" rx="3" fill="#ffffff"/>
+                        <rect x="8" y="34" width="32" height="6" rx="3" fill="#ffffff"/>
+                        <circle cx="24" cy="24" r="4" fill="#0066ff"/>
+                    </svg>
+                    <div class="logo-text" style="font-size:22px;">IRON <span>GYM</span></div>
+                </a>
+                <p>A Iron Gym e a academia mais completa e moderna da cidade. Equipamentos de ultima geracao, profissionais qualificados e uma estrutura pensada para o seu melhor desempenho.</p>
+            </div>
+            <div>
+                <h4>Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="horarios.html">Horarios</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Modalidades</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#modalidades">Musculacao</a></li>
+                    <li><a href="index.html#modalidades">Crossfit</a></li>
+                    <li><a href="index.html#modalidades">Funcional</a></li>
+                    <li><a href="index.html#modalidades">Yoga</a></li>
+                    <li><a href="index.html#modalidades">Pilates</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <ul class="footer-links">
+                    <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+                    <li><a href="mailto:contato@irongym.com.br">contato@irongym.com.br</a></li>
+                    <li>Av. Paulista, 1000</li>
+                    <li>Sao Paulo - SP, 01310-100</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Iron Gym. Todos os direitos reservados.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="#" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                </a>
+                <a href="#" aria-label="YouTube">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+                </a>
+                <a href="#" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var btn = form.querySelector('button[type="submit"]');
+            var originalText = btn.innerHTML;
+            btn.innerHTML = 'ENVIANDO...';
+            btn.disabled = true;
+
+            setTimeout(function() {
+                var existing = document.querySelector('.toast');
+                if (existing) existing.remove();
+
+                var toast = document.createElement('div');
+                toast.className = 'toast success';
+                toast.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2" style="width:20px;height:20px;flex-shrink:0;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><p>Mensagem enviada com sucesso! Entraremos em contato em breve.</p>';
+                document.body.appendChild(toast);
+                requestAnimationFrame(function() { toast.classList.add('show'); });
+
+                setTimeout(function() {
+                    toast.classList.remove('show');
+                    setTimeout(function() { toast.remove(); }, 400);
+                }, 4000);
+
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                form.reset();
+            }, 1500);
+        });
+    }
+});
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

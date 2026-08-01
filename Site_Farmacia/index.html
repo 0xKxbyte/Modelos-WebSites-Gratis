@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vitalis Farma — cuidado farmaceutico de excelencia. Atendimento humanizado, medicamentos de qualidade e servicos especializados.">
+  <title>Vitalis Farma — Cuidado que transforma vidas</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f172a'/%3E%3Cpath d='M16 8v16M8 16h16' stroke='white' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="loading" id="loading">
+  <div class="loading-logo">Vitalis Farma</div>
+  <div class="loading-bar"><div class="loading-bar-inner"></div></div>
+</div>
+
+<header class="header" id="header">
+  <div class="container">
+    <a href="index.html" class="header-logo">
+      <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#0f172a"/><path d="M16 8v16M8 16h16" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+      Vitalis Farma
+    </a>
+    <button class="mobile-btn" id="mobileBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav-link active">Inicio</a>
+      <a href="pages/sobre.html" class="nav-link">Sobre</a>
+      <a href="pages/servicos.html" class="nav-link">Servicos</a>
+      <a href="pages/produtos.html" class="nav-link">Produtos</a>
+      <a href="pages/contato.html" class="nav-link">Contato</a>
+      <a href="pages/contato.html" class="nav-link nav-cta">Fale Conosco</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" id="hero3d"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag"><span>Novo</span>Atendimento farmaceutico premium</div>
+        <h1 class="hero-title">Cuidado que <em>transforma vidas</em></h1>
+        <p class="hero-desc">Na Vitalis Farma, sua saude e nossa prioridade. Medicamentos de qualidade, servicos especializados e uma equipe de farmaceuticos pronta para cuidar de voce.</p>
+        <div class="hero-actions">
+          <a href="pages/produtos.html" class="btn btn-primary btn-lg">Ver Produtos</a>
+          <a href="pages/sobre.html" class="btn btn-secondary btn-lg">Conheca a Vitalis</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num" data-count="5000" data-suffix="+">0+</span>
+            <span class="hero-stat-label">Clientes atendidos</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num" data-count="1500" data-suffix="+">0+</span>
+            <span class="hero-stat-label">Produtos disponiveis</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num" data-count="12" data-suffix="">0</span>
+            <span class="hero-stat-label">Farmaceuticos</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num" data-count="98" data-suffix="%">0%</span>
+            <span class="hero-stat-label">Satisfacao</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICOS -->
+  <section class="section" id="servicos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Servicos</span>
+        <h2 class="section-title">Cuidado completo para sua saude</h2>
+        <p class="section-desc">Servicos farmaceuticos especializados com profissionais capacitados e equipamentos modernos.</p>
+      </div>
+      <div class="grid grid-3 reveal">
+        <article class="card service-card">
+          <div class="card-icon" style="background:var(--gray-200)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3 class="card-title">Acompanhamento Farmaceutico</h3>
+          <p class="card-text">Monitoramento personalizado do uso de medicamentos com nossos especialistas.</p>
+          <a href="pages/servicos.html" class="btn btn-primary btn-sm" style="margin-top: var(--space-5);">Saiba mais</a>
+        </article>
+        <article class="card service-card">
+          <div class="card-icon" style="background:var(--gray-200)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3 class="card-title">Testes Laboratoriais</h3>
+          <p class="card-text">Perfil lipidico, glicemia e outros exames com resultados rapidos e precisos.</p>
+          <a href="pages/servicos.html" class="btn btn-primary btn-sm" style="margin-top: var(--space-5);">Saiba mais</a>
+        </article>
+        <article class="card service-card">
+          <div class="card-icon" style="background:var(--gray-200)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/></svg>
+          </div>
+          <h3 class="card-title">Afericao de Pressao</h3>
+          <p class="card-text">Medicao de pressao arterial com equipamentos modernos e precisos.</p>
+          <a href="pages/servicos.html" class="btn btn-primary btn-sm" style="margin-top: var(--space-5);">Saiba mais</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section" style="background:var(--gray-100);" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="12" r="3" fill="var(--black)" opacity="0.1"/></svg>
+        </div>
+        <div class="reveal reveal-d2">
+          <span class="section-label">Quem somos</span>
+          <h2>Uma historia dedicada a cuidar de pessoas</h2>
+          <p style="margin-top:var(--space-4);">Fundada em 2018, a Vitalis Farma nasceu do sonho de oferecer um atendimento farmaceutico diferenciado — combinando conhecimento cientifico com acolhimento humanizado.</p>
+          <div class="about-features">
+            <div class="about-feat">
+              <div class="about-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+              <div class="about-feat-text"><h4>Qualidade garantida</h4><p>Medicamentos certificados e armazenados conforme normas ANVISA</p></div>
+            </div>
+            <div class="about-feat">
+              <div class="about-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div class="about-feat-text"><h4>Seguranca total</h4><p>Farmaceuticos especializados e ambiente seguro</p></div>
+            </div>
+            <div class="about-feat">
+              <div class="about-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+              <div class="about-feat-text"><h4>Precos justos</h4><p>Programa de descontos e fidelidade para toda a familia</p></div>
+            </div>
+            <div class="about-feat">
+              <div class="about-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              <div class="about-feat-text"><h4>Equipe especializada</h4><p>Profissionais capacitados e em constante atualizacao</p></div>
+            </div>
+          </div>
+          <a href="pages/sobre.html" class="btn btn-primary" style="margin-top:var(--space-6);">Conheca nossa historia</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS DESTAQUE -->
+  <section class="section" id="produtos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Produtos</span>
+        <h2 class="section-title">Medicamentos e muito mais</h2>
+        <p class="section-desc">Trabalhamos com as melhores marcas e laboratorios para garantir o melhor tratamento para voce.</p>
+      </div>
+      <div class="grid grid-2 reveal">
+        <article class="card product-card">
+          <div class="product-card-img"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 12h6"/><path d="M12 9v6"/></svg></div>
+          <span class="product-card-category">Medicamentos</span>
+          <h3 class="product-card-name">Paracetamol 750mg</h3>
+          <p class="product-card-principle">Principio ativo: Paracetamol</p>
+          <p class="product-card-desc">Analgesico e antitérmico de acao rapida. Indicado para dores leves a moderadas e febre.</p>
+          <div class="product-card-footer">
+            <div>
+              <div class="product-card-price">R$ 15,90</div>
+              <span class="product-card-stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Em estoque</span>
+            </div>
+            <button class="btn btn-primary btn-sm btn-icon" onclick="cart.add({id:1,nome:'Paracetamol 750mg',preco:15.90})" aria-label="Adicionar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+          </div>
+        </article>
+        <article class="card product-card">
+          <div class="product-card-img"><span class="product-card-badge">Dermocosmetico</span><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83"/></svg></div>
+          <span class="product-card-category">Dermocosmeticos</span>
+          <h3 class="product-card-name">Protetor Solar FPS 60</h3>
+          <p class="product-card-principle">Filtros solares UVA/UVB</p>
+          <p class="product-card-desc">Protecao solar de alta performance com textura leve e toque seco.</p>
+          <div class="product-card-footer">
+            <div>
+              <div class="product-card-price">R$ 89,90</div>
+              <span class="product-card-stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Em estoque</span>
+            </div>
+            <button class="btn btn-primary btn-sm btn-icon" onclick="cart.add({id:2,nome:'Protetor Solar FPS 60',preco:89.90})" aria-label="Adicionar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+          </div>
+        </article>
+      </div>
+      <div style="text-align:center;margin-top:var(--space-7);">
+        <a href="pages/produtos.html" class="btn btn-secondary">Ver todos os produtos &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="section" style="background:var(--gray-100);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Depoimentos</span>
+        <h2 class="section-title">O que nossos clientes dizem</h2>
+      </div>
+      <div class="grid grid-3 reveal">
+        <blockquote class="testimonial-card">
+          <p class="testimonial-text">&ldquo;A Vitalis Farma mudou minha forma de cuidar da saude. O acompanhamento farmaceutico e excepcional.&rdquo;</p>
+          <footer class="testimonial-author"><div class="testimonial-avatar">MR</div><div><cite class="testimonial-name">Maria Rodrigues</cite><span class="testimonial-role">Cliente ha 3 anos</span></div></footer>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p class="testimonial-text">&ldquo;Profissionais muito atenciosos e prestativos. Sempre saio daqui com todas as duvidas esclarecidas.&rdquo;</p>
+          <footer class="testimonial-author"><div class="testimonial-avatar">PL</div><div><cite class="testimonial-name">Pedro Lima</cite><span class="testimonial-role">Cliente ha 2 anos</span></div></footer>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p class="testimonial-text">&ldquo;Precos justos e produtos de qualidade. A entrega e sempre rapida. A melhor farmacia da regiao.&rdquo;</p>
+          <footer class="testimonial-author"><div class="testimonial-avatar">AS</div><div><cite class="testimonial-name">Ana Silva</cite><span class="testimonial-role">Cliente ha 4 anos</span></div></footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA NEWSLETTER -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Receba ofertas exclusivas</h2>
+      <p>Cadastre-se para receber novidades, promocoes e dicas de saude no seu email.</p>
+      <form class="newsletter" onsubmit="event.preventDefault();alert('Cadastro realizado com sucesso!')">
+        <input type="email" placeholder="Seu melhor email" required>
+        <button type="submit" class="btn btn-secondary btn-lg" style="white-space:nowrap;background:var(--white);color:var(--black);border:none;">Cadastrar</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="white"/><path d="M16 8v16M8 16h16" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/></svg>Vitalis Farma</div>
+        <p class="footer-desc">Sua saude em primeiro lugar. Farmacia ficticia criada para demonstrar conceitos de design UI/UX e desenvolvimento web full-stack.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Paginas</h4>
+        <div class="footer-links">
+          <a href="index.html">Inicio</a>
+          <a href="pages/sobre.html">Sobre</a>
+          <a href="pages/servicos.html">Servicos</a>
+          <a href="pages/produtos.html">Produtos</a>
+          <a href="pages/contato.html">Contato</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Servicos</h4>
+        <div class="footer-links">
+          <a href="pages/servicos.html">Acompanhamento</a>
+          <a href="pages/servicos.html">Testes Laboratoriais</a>
+          <a href="pages/servicos.html">Afericao de Pressao</a>
+          <a href="pages/servicos.html">Aplicacao de Injetaveis</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contato</h4>
+        <div class="footer-links">
+          <a href="#">Av. das Nacoes Unidas, 1234</a>
+          <a href="tel:+551130000000">(11) 3000-0000</a>
+          <a href="mailto:contato@vitalisfarma.com.br">contato@vitalisfarma.com.br</a>
+          <a href="#">Seg-Sab: 07h as 22h</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Vitalis Farma</span>
+      <div><a href="#" style="margin-right:var(--space-5);">Privacidade</a><a href="#">Termos</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Voltar ao topo">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/three-scene.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

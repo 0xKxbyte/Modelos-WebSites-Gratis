@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore Pro - Sua Loja de Tecnologia Premium</title>
+<script>if(!localStorage.getItem('auth_gate')){window.location.href='login-gate.html'}</script>
+    <meta name="description" content="TechStore Pro - Sua loja de tecnologia premium. PCs Gamer, Notebooks, Hardware, Periféricos e muito mais.">
+    <meta name="keywords" content="techstore, tecnologia, pc gamer, notebook, hardware, perifericos, loja online">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="TechStore Pro - Sua Loja de Tecnologia Premium">
+    <meta property="og:description" content="PCs Gamer, Notebooks, Hardware e Periféricos de alta performance">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://techstorepro.com">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236C3CF5'/%3E%3Cpath d='M16 6L6 12v8l10 6 10-6v-8L16 6z' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='white'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+    <div id="toast-container" class="toast-container"></div>
+
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" rx="10" fill="url(#logoGrad)"/>
+                    <path d="M20 8L10 14v12l10 6 10-6V14L20 8z" stroke="white" stroke-width="2.5" fill="none"/>
+                    <circle cx="20" cy="20" r="5" fill="white"/>
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                            <stop offset="0%" stop-color="#6C3CF5"/>
+                            <stop offset="100%" stop-color="#E94560"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>TechStore</span>
+            </a>
+
+            <div class="search-bar">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" id="search-input" placeholder="Buscar produtos... (ex: PC Gamer, RTX 5090)" autocomplete="off">
+                <div class="search-results" id="search-results"></div>
+            </div>
+
+            <div class="header-actions">
+                <button class="action-btn" id="user-btn" title="Entrar">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </button>
+                <button class="action-btn" onclick="window.location.href='pages/favorites.html'" title="Favoritos">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+                <button class="action-btn" onclick="window.location.href='pages/cart.html'" title="Carrinho">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    <span class="badge cart-badge" style="display:none;">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content reveal-left">
+                    <div class="hero-tag">
+                        <span class="dot"></span>
+                        Nova Colecao 2026
+                    </div>
+                    <h1 class="hero-title">
+                        Tecnologia que<br>
+                        <span class="highlight">Transforma</span> o<br>
+                        Seu Mundo
+                    </h1>
+                    <p class="hero-desc">
+                        Descubra o que ha de mais moderno em tecnologia. PCs Gamer de alta performance, 
+                        Notebooks ultrabooks, componentes de ultima geracao e muito mais.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#produtos" class="btn btn-primary btn-lg magnetic-btn">
+                            Ver Produtos
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="#categorias" class="btn btn-outline btn-lg magnetic-btn">Categorias</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat"><h3 data-target="15000" data-duration="2000">0</h3><p>Produtos Vendidos</p></div>
+                        <div class="hero-stat"><h3 data-target="5000" data-duration="2000">0</h3><p>Clientes Satisfeitos</p></div>
+                        <div class="hero-stat"><h3 data-target="48" data-duration="2000">0</h3><p>Horas para Entrega</p></div>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal-right">
+                    <div class="hero-3d-container tilt-3d">
+                        <div class="hero-card-3d tilt-inner">
+                            <div class="hero-product-card">
+                                <img src="https://placehold.co/280x280/1a1a2e/e94560?text=PC+Gamer+Titan+X" alt="PC Gamer Titan X">
+                                <h3>PC Gamer Titan X</h3>
+                                <div class="price-tag">R$ 13.999,99</div>
+                            </div>
+                        </div>
+                        <div class="floating-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Frete Gratis
+                        </div>
+                        <div class="floating-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            +1000 Avaliacoes
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories" id="categorias">
+        <div class="container">
+            <h2 class="section-title gradient-text">Categorias</h2>
+            <div class="categories-grid stagger-children">
+                <a href="pages/search.html?cat=computadores" class="category-card">
+                    <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="14" rx="2"/><path d="M9 22h6"/><path d="M12 16v6"/></svg>
+                    <h3>Computadores</h3>
+                    <p>PCs completos e workstations</p>
+                </a>
+                <a href="pages/search.html?cat=notebooks" class="category-card">
+                    <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+                    <h3>Notebooks</h3>
+                    <p>Ultrabooks e gamers</p>
+                </a>
+                <a href="pages/search.html?cat=hardware" class="category-card">
+                    <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/></svg>
+                    <h3>Hardware</h3>
+                    <p>Placas, processadores e mais</p>
+                </a>
+                <a href="pages/search.html?cat=perifericos" class="category-card">
+                    <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 10v.01"/><rect x="2" y="6" width="20" height="12" rx="2"/></svg>
+                    <h3>Perifericos</h3>
+                    <p>Teclados, mouses e headsets</p>
+                </a>
+                <a href="pages/search.html?cat=celulares" class="category-card">
+                    <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    <h3>Celulares</h3>
+                    <p>Smartphones e acessorios</p>
+                </a>
+                <a href="pages/search.html?cat=kit-tecnico" class="category-card">
+                    <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    <h3>Kit Tecnico</h3>
+                    <p>Ferramentas profissionais</p>
+                </a>
+                <a href="pages/search.html?cat=limpeza" class="category-card">
+                    <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    <h3>Limpeza</h3>
+                    <p>Produtos para limpeza de PCs</p>
+                </a>
+                <a href="pages/search.html?cat=monitores" class="category-card">
+                    <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    <h3>Monitores</h3>
+                    <p>Displays e monitores</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section" id="produtos">
+        <div class="container">
+            <div class="products-header">
+                <h2 class="section-title gradient-text">Produtos em Destaque</h2>
+                <div class="products-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="computadores">PCs</button>
+                    <button class="filter-btn" data-filter="notebooks">Notebooks</button>
+                    <button class="filter-btn" data-filter="hardware">Hardware</button>
+                    <button class="filter-btn" data-filter="perifericos">Perifericos</button>
+                </div>
+            </div>
+            <div class="products-grid stagger-children" id="products-grid"></div>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0; background: var(--dark-2);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+                <div class="reveal" style="text-align: center; padding: 40px; border: 1px solid var(--glass-border); border-radius: var(--radius-lg);">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" style="margin-bottom: 20px;">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <h3 style="margin-bottom: 12px; font-family: 'Space Grotesk', sans-serif;">Qualidade Premium</h3>
+                    <p style="color: var(--gray-400); font-size: 0.9rem; line-height: 1.7;">Produtos originais e de alta qualidade, selecionados especialmente para voce.</p>
+                </div>
+                <div class="reveal" style="text-align: center; padding: 40px; border: 1px solid var(--glass-border); border-radius: var(--radius-lg);">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="1.5" style="margin-bottom: 20px;">
+                        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <h3 style="margin-bottom: 12px; font-family: 'Space Grotesk', sans-serif;">Entrega Rapida</h3>
+                    <p style="color: var(--gray-400); font-size: 0.9rem; line-height: 1.7;">Envio para todo o Brasil com prazos super rapidos e frete via Correios.</p>
+                </div>
+                <div class="reveal" style="text-align: center; padding: 40px; border: 1px solid var(--glass-border); border-radius: var(--radius-lg);">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="1.5" style="margin-bottom: 20px;">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <h3 style="margin-bottom: 12px; font-family: 'Space Grotesk', sans-serif;">Seguranca Garantida</h3>
+                    <p style="color: var(--gray-400); font-size: 0.9rem; line-height: 1.7;">Compra segura com criptografia SSL e sistema anti-fraude integrado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 100px 0; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(108,60,245,0.05), rgba(233,69,96,0.05));"></div>
+        <div class="container" style="text-align: center; position: relative;">
+            <h2 class="section-title gradient-text" style="margin-bottom: 16px;">Calcule seu Frete</h2>
+            <p style="color: var(--gray-400); margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto;">Digite seu CEP e descubra o valor e prazo de entrega para seus produtos favoritos</p>
+            <div style="display: flex; gap: 12px; max-width: 400px; margin: 0 auto;">
+                <input type="text" id="freight-cep" placeholder="Digite seu CEP" style="flex: 1; padding: 14px 20px; border-radius: var(--radius-full); border: 1.5px solid var(--glass-border); background: var(--dark-2); color: var(--gray-100); font-size: 1rem; text-align: center;" maxlength="9" oninput="this.value=this.value.replace(/\D/g,'').replace(/^(\d{5})(\d)/,'$1-$2')">
+                <button class="btn btn-primary btn-lg" onclick="Freight.calculate()">Calcular</button>
+            </div>
+            <div id="freight-result" style="margin-top: 24px;"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                            <rect width="40" height="40" rx="10" fill="url(#logoGradFooter)"/>
+                            <path d="M20 8L10 14v12l10 6 10-6V14L20 8z" stroke="white" stroke-width="2.5" fill="none"/>
+                            <circle cx="20" cy="20" r="5" fill="white"/>
+                            <defs>
+                                <linearGradient id="logoGradFooter" x1="0" y1="0" x2="40" y2="40">
+                                    <stop offset="0%" stop-color="#6C3CF5"/>
+                                    <stop offset="100%" stop-color="#E94560"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>TechStore</span>
+                    </div>
+                    <p>Sua loja de tecnologia premium. Os melhores produtos com os melhores precos e a melhor experiencia de compra.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="#" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+                        <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+                        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="pages/search.html?cat=computadores">Computadores</a></li>
+                        <li><a href="pages/search.html?cat=notebooks">Notebooks</a></li>
+                        <li><a href="pages/search.html?cat=hardware">Hardware</a></li>
+                        <li><a href="pages/search.html?cat=perifericos">Perifericos</a></li>
+                        <li><a href="pages/search.html?cat=celulares">Celulares</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nos</a></li>
+                        <li><a href="#">Politica de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Trocas e Devolucoes</a></li>
+                        <li><a href="#">Fale Conosco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Atendimento</h4>
+                    <ul>
+                        <li><a href="#">Seg a Sex: 08h as 18h</a></li>
+                        <li><a href="#">Sab: 08h as 12h</a></li>
+                        <li><a href="#">sac@techstorepro.com</a></li>
+                        <li><a href="#">(11) 99999-8888</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 TechStore Pro. Todos os direitos reservados.</span>
+                <div class="payment-icons">
+                    <svg viewBox="0 0 36 24"><rect width="36" height="24" rx="3" fill="#1A1A3E"/><text x="18" y="16" text-anchor="middle" font-size="8" fill="white" font-weight="bold">VISA</text></svg>
+                    <svg viewBox="0 0 36 24"><rect width="36" height="24" rx="3" fill="#1A1A3E"/><text x="18" y="16" text-anchor="middle" font-size="7" fill="white" font-weight="bold">MC</text></svg>
+                    <svg viewBox="0 0 36 24"><rect width="36" height="24" rx="3" fill="#1A1A3E"/><text x="18" y="16" text-anchor="middle" font-size="6" fill="white" font-weight="bold">AMEX</text></svg>
+                    <svg viewBox="0 0 36 24"><rect width="36" height="24" rx="3" fill="#1A1A3E"/><text x="18" y="16" text-anchor="middle" font-size="6" fill="white" font-weight="bold">PIX</text></svg>
+                    <svg viewBox="0 0 36 24"><rect width="36" height="24" rx="3" fill="#1A1A3E"/><text x="18" y="16" text-anchor="middle" font-size="5" fill="white" font-weight="bold">BOLETO</text></svg>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/favorites.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script>
+        const ALL_PRODUCTS = [
+            { id: 1, nome: 'PC Gamer Titan X', slug: 'pc-gamer-titan-x', descricao: 'PC Gamer de alta performance com Intel Core i9-14900K, 32GB DDR5, RTX 4090, SSD 1TB NVMe.', categoria: 'computadores', preco: 15999.99, preco_promocional: 13999.99, imagens: ['https://placehold.co/280x280/1a1a2e/e94560?text=PC+Gamer+Titan+X'], parcelas: 12 },
+            { id: 2, nome: 'PC Workstation Pro', slug: 'pc-workstation-pro', descricao: 'Workstation profissional AMD Ryzen 9, 64GB RAM, RTX 4080.', categoria: 'computadores', preco: 21999.99, preco_promocional: 19999.99, imagens: ['https://placehold.co/280x280/16213e/0f3460?text=Workstation+Pro'], parcelas: 12 },
+            { id: 3, nome: 'Notebook UltraBook Pro 15', slug: 'notebook-ultrabook-pro-15', descricao: 'Notebook ultrafino 15.6 4K OLED, Intel Core i7, 16GB RAM.', categoria: 'notebooks', preco: 8499.99, preco_promocional: 7799.99, imagens: ['https://placehold.co/280x280/0f3460/e94560?text=UltraBook+Pro'], parcelas: 12 },
+            { id: 4, nome: 'RTX 5090 Phantom', slug: 'rtx-5090-phantom', descricao: 'Placa de video NVIDIA GeForce RTX 5090 32GB GDDR7.', categoria: 'hardware', preco: 12999.99, preco_promocional: 11999.99, imagens: ['https://placehold.co/280x280/e94560/1a1a2e?text=RTX+5090'], parcelas: 12 },
+            { id: 5, nome: 'Intel Core i9-14900K', slug: 'intel-core-i9-14900k', descricao: 'Processador 24 nucleos, 32 threads, 6.0GHz Turbo.', categoria: 'hardware', preco: 4299.99, preco_promocional: 3899.99, imagens: ['https://placehold.co/280x280/1a1a2e/0f3460?text=i9-14900K'], parcelas: 10 },
+            { id: 6, nome: 'Teclado Mecanico RGB Phantom', slug: 'teclado-mecanico-rgb-phantom', descricao: 'Teclado mecanico Cherry MX Blue, RGB, aluminio.', categoria: 'perifericos', preco: 599.99, preco_promocional: 499.99, imagens: ['https://placehold.co/280x280/16213e/e94560?text=Teclado+Phantom'], parcelas: 6 },
+            { id: 7, nome: 'Mouse Gamer Pro X', slug: 'mouse-gamer-pro-x', descricao: 'Mouse sem fio 32K DPI, 8 botoes, bateria 70h.', categoria: 'perifericos', preco: 399.99, preco_promocional: 349.99, imagens: ['https://placehold.co/280x280/e94560/16213e?text=Mouse+Pro+X'], parcelas: 6 },
+            { id: 8, nome: 'Smartphone Galaxy Ultra 25', slug: 'smartphone-galaxy-ultra-25', descricao: 'Smartphone 6.9 Dynamic AMOLED, 512GB, camera 200MP.', categoria: 'celulares', preco: 7999.99, preco_promocional: 7299.99, imagens: ['https://placehold.co/280x280/0f3460/1a1a2e?text=Galaxy+Ultra'], parcelas: 12 },
+            { id: 9, nome: 'Kit Tecnico Profissional 150 Pecas', slug: 'kit-tecnico-profissional', descricao: 'Kit 150 ferramentas para montagem e manutencao.', categoria: 'kit-tecnico', preco: 299.99, preco_promocional: 249.99, imagens: ['https://placehold.co/280x280/16213e/0f3460?text=Kit+Tecnico'], parcelas: 5 },
+            { id: 10, nome: 'Kit Limpeza Eletronicos Pro', slug: 'kit-limpeza-eletronicos-pro', descricao: 'Kit completo limpeza: spray, pano, alcool isopropilico.', categoria: 'limpeza', preco: 89.99, preco_promocional: 69.99, imagens: ['https://placehold.co/280x280/e94560/0f3460?text=Kit+Limpeza'], parcelas: 3 },
+            { id: 11, nome: 'Monitor 32 4K HDR1000', slug: 'monitor-32-4k-hdr1000', descricao: 'Monitor 32 4K UHD IPS, HDR1000, 144Hz, 1ms.', categoria: 'monitores', preco: 4999.99, preco_promocional: 4499.99, imagens: ['https://placehold.co/280x280/1a1a2e/e94560?text=Monitor+32+4K'], parcelas: 12 },
+            { id: 12, nome: 'SSD NVMe 2TB SpeedForce', slug: 'ssd-nvme-2tb-speedforce', descricao: 'SSD NVMe PCIe 5.0, leitura 12.000MB/s.', categoria: 'hardware', preco: 1599.99, preco_promocional: 1399.99, imagens: ['https://placehold.co/280x280/0f3460/e94560?text=SSD+2TB'], parcelas: 8 }
+        ];
+
+        function renderProducts() {
+            const grid = document.getElementById('products-grid');
+            if (!grid) return;
+            ALL_PRODUCTS.slice(0, 8).forEach((p, i) => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.dataset.category = p.categoria;
+                card.dataset.price = (p.preco_promocional || p.preco);
+                card.dataset.id = p.id;
+                const img = p.imagens[0];
+                const price = p.preco_promocional || p.preco;
+                const oldPrice = p.preco_promocional ? p.preco : null;
+                const parcela = (price / p.parcelas).toFixed(2);
+                card.innerHTML = `
+                    <div class="product-image">
+                        <img src="${img}" alt="${p.nome}" loading="lazy">
+                        <div class="product-actions">
+                            <button class="fav-btn" data-id="${p.id}">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </button>
+                        </div>
+                        ${p.preco_promocional ? '<div class="product-badge promocao">Promocao</div>' : '<div class="product-badge destaque">Destaque</div>'}
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">${p.categoria}</div>
+                        <a href="pages/product.html?slug=${p.slug}"><h3>${p.nome}</h3></a>
+                        <p class="product-desc">${p.descricao.substring(0, 60)}...</p>
+                        <div class="product-price-row">
+                            <div class="product-price">
+                                ${oldPrice ? `<span class="old-price">R$ ${oldPrice.toFixed(2).replace('.', ',')}</span>` : ''}
+                                <span class="current-price">R$ ${price.toFixed(2).replace('.', ',')}</span>
+                                <span class="installments">${p.parcelas}x de R$ ${parcela.replace('.', ',')} sem juros</span>
+                            </div>
+                            <button class="btn-buy" onclick="Cart.add(${p.id})">Comprar</button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            setTimeout(() => { Favorites.updateButtons(); }, 100);
+        }
+
+        const Freight = {
+            async calculate() {
+                const cep = document.getElementById('freight-cep').value.replace(/\D/g, '');
+                const result = document.getElementById('freight-result');
+                if (cep.length !== 8) {
+                    Toast.show('Digite um CEP valido', 'error');
+                    return;
+                }
+                result.innerHTML = '<div class="loading-spinner"></div>';
+                const freightSimulado = [
+                    { servico: 'Sedex', codigo: '04014', valor: Math.round(Math.random() * 40 + 15), prazo: Math.round(Math.random() * 3 + 1) },
+                    { servico: 'PAC', codigo: '04510', valor: Math.round(Math.random() * 25 + 8), prazo: Math.round(Math.random() * 8 + 3) }
+                ];
+                if (freightSimulado.length > 0) {
+                    result.innerHTML = `<div style="background: var(--dark-3); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 24px; max-width: 400px; margin: 0 auto;">
+                        <h4 style="margin-bottom: 16px;">Opcoes de Frete</h4>
+                        ${freightSimulado.map(f => `
+                            <div class="frete-option" style="display: flex; justify-content: space-between; padding: 12px; border-bottom: 1px solid var(--glass-border);">
+                                <div>
+                                    <strong>${f.servico}</strong>
+                                    <p style="font-size: 0.8rem; color: var(--gray-400);">${f.prazo} dia(s) uteis</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <strong style="color: var(--accent); font-size: 1.1rem;">R$ ${f.valor.toFixed(2).replace('.', ',')}</strong>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>`;
+                    if (document.getElementById('freight-cep-product')) {
+                        document.getElementById('freight-cep-product').value = cep;
+                    }
+                } else {
+                    result.innerHTML = '<p style="color: var(--gray-400);">CEP nao encontrado ou erro na consulta. Tente novamente.</p>';
+                }
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+            if (document.getElementById('freight-cep')) {
+                document.getElementById('freight-cep').addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') Freight.calculate();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

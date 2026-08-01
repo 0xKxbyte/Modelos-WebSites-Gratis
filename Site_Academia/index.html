@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IRON GYM - A academia mais completa da cidade. Musculacao, crossfit, funcional e muito mais. Venha transformar seu corpo!">
+    <meta name="keywords" content="academia, musculacao, crossfit, fitness, treino, iron gym">
+    <meta name="author" content="Iron Gym">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <title>IRON GYM - Home - Academia Profissional</title>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+
+<!-- Particles Canvas -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- Header -->
+<header class="header">
+    <div class="header-inner">
+        <a href="index.html" class="logo">
+            <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="18" width="8" height="12" rx="2" fill="#0066ff"/>
+                <rect x="36" y="18" width="8" height="12" rx="2" fill="#0066ff"/>
+                <rect x="14" y="8" width="6" height="32" rx="3" fill="#ffffff"/>
+                <rect x="28" y="8" width="6" height="32" rx="3" fill="#ffffff"/>
+                <rect x="8" y="8" width="32" height="6" rx="3" fill="#ffffff"/>
+                <rect x="8" y="34" width="32" height="6" rx="3" fill="#ffffff"/>
+                <circle cx="24" cy="24" r="4" fill="#0066ff"/>
+            </svg>
+            <div class="logo-text">IRON <span>GYM</span></div>
+        </a>
+        <nav class="nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="horarios.html">Horarios</a>
+            <a href="contato.html">Contato</a>
+            <a href="contato.html" class="cta-btn">Matricule-se</a>
+        </nav>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+<!-- Timer Bar -->
+<div class="timer-bar">
+    <div class="timer-inner">
+        <span class="timer-label"><strong>PROMOCAO FORTE</strong> &mdash; tempo limitado</span>
+        <div class="timer-display">
+            <div class="timer-block">
+                <span class="num" id="timer-hours">24</span>
+                <span class="label">Horas</span>
+            </div>
+            <span class="timer-sep">:</span>
+            <div class="timer-block">
+                <span class="num" id="timer-minutes">59</span>
+                <span class="label">Minutos</span>
+            </div>
+            <span class="timer-sep">:</span>
+            <div class="timer-block">
+                <span class="num" id="timer-seconds">59</span>
+                <span class="label">Segundos</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80" alt="Iron Gym Academia">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span class="dot"></span>
+            Nova unidade inaugurada
+        </div>
+        <h1 class="hero-title">
+            Transforme seu<br>
+            <span>Corpo e Mente</span>
+        </h1>
+        <p class="hero-subtitle">
+            A academia mais completa da cidade com equipamentos de ultima geracao, 
+            profissionais certificados e mais de 50 modalidades diferentes.
+        </p>
+        <div class="hero-actions">
+            <a href="contato.html" class="btn btn-primary btn-lg">Matricule-se Agora</a>
+            <a href="sobre.html" class="btn btn-secondary btn-lg">Conheca Mais</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="num" data-target="5000">0+</span>
+                <span class="label">Alunos Ativos</span>
+            </div>
+            <div class="stat-item">
+                <span class="num" data-target="50">0+</span>
+                <span class="label">Modalidades</span>
+            </div>
+            <div class="stat-item">
+                <span class="num" data-target="15">0+</span>
+                <span class="label">Anos de Historia</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="section" id="modalidades">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-tag">
+                <span class="line"></span>
+                Nossas Modalidades
+                <span class="line"></span>
+            </div>
+            <h2 class="section-title">Tudo que voce <span>precisa</span></h2>
+            <p class="section-desc">Oferecemos uma variedade completa de modalidades para todos os objetivos e niveis.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <rect x="6" y="24" width="10" height="16" rx="2" stroke="#0066ff" stroke-width="2.5"/>
+                        <rect x="48" y="24" width="10" height="16" rx="2" stroke="#0066ff" stroke-width="2.5"/>
+                        <rect x="18" y="12" width="8" height="40" rx="3" stroke="#ffffff" stroke-width="2.5"/>
+                        <rect x="38" y="12" width="8" height="40" rx="3" stroke="#ffffff" stroke-width="2.5"/>
+                        <rect x="12" y="12" width="40" height="8" rx="3" stroke="#ffffff" stroke-width="2.5"/>
+                        <rect x="12" y="44" width="40" height="8" rx="3" stroke="#ffffff" stroke-width="2.5"/>
+                        <circle cx="32" cy="32" r="5" fill="#0066ff"/>
+                    </svg>
+                </div>
+                <h3>Musculacao</h3>
+                <p>Equipamentos modernos e espacos amplos para o treino de musculacao mais eficiente da cidade.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <circle cx="32" cy="20" r="10" stroke="#ffffff" stroke-width="2.5"/>
+                        <path d="M18 56c0-7.73 6.27-14 14-14s14 6.27 14 14" stroke="#0066ff" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M22 28l-8 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M42 28l8 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M28 36l-4 8" stroke="#0066ff" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M36 36l4 8" stroke="#0066ff" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Crossfit</h3>
+                <p>Treinos de alta intensidade que combinam levantamento olimpico, ginastica e cardio.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <path d="M32 8C22.06 8 14 16.06 14 26c0 12 18 30 18 30s18-18 18-30c0-9.94-8.06-18-18-18z" stroke="#0066ff" stroke-width="2.5" stroke-linejoin="round"/>
+                        <circle cx="32" cy="24" r="6" stroke="#ffffff" stroke-width="2.5"/>
+                    </svg>
+                </div>
+                <h3>Funcional</h3>
+                <p>Exercicios que simulam movimentos do dia a dia para melhorar sua qualidade de vida.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <path d="M48 56c-6-4-12-4-16 0-4-4-10-4-16 0" stroke="#0066ff" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M42 44c-4-3-8-3-10 0-2-3-6-3-10 0" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="32" cy="16" r="8" stroke="#0066ff" stroke-width="2.5"/>
+                    </svg>
+                </div>
+                <h3>Yoga</h3>
+                <p>Aulas de yoga para todos os niveis, do iniciante ao avancado, em ambiente tranquilo.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <rect x="8" y="14" width="48" height="36" rx="4" stroke="#ffffff" stroke-width="2.5"/>
+                        <rect x="14" y="22" width="36" height="6" rx="2" stroke="#0066ff" stroke-width="2"/>
+                        <rect x="14" y="32" width="36" height="6" rx="2" stroke="#0066ff" stroke-width="2"/>
+                        <rect x="14" y="42" width="18" height="4" rx="2" stroke="#0066ff" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h3>Pilates</h3>
+                <p>Metodo de exercicio que trabalha o corpo de forma integrada, fortalecendo e alongando.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <circle cx="32" cy="32" r="24" stroke="#0066ff" stroke-width="2.5"/>
+                        <path d="M20 32l8 8 16-16" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Treino Personalizado</h3>
+                <p>Programa de treino individualizado com acompanhamento de profissionais especializados.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Preview -->
+<section class="section about-preview">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image reveal">
+                <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80" alt="Estrutura Iron Gym">
+            </div>
+            <div class="about-content reveal">
+                <div class="section-tag">
+                    <span class="line"></span>
+                    Quem Somos
+                </div>
+                <h2>Mais que uma <span>Academia</span></h2>
+                <p>A Iron Gym nasceu da paixao pelo fitness e pela transformacao fisica e mental. Ha mais de 15 anos ajudamos pessoas a alcancarem seus melhores resultados.</p>
+                <p>Com uma infraestrutura moderna, equipamentos importados e uma equipe de profissionais altamente qualificados, somos referencia em qualidade e inovacao no segmento fitness.</p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2.5">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Equipamentos Modernos
+                    </div>
+                    <div class="about-feature">
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2.5">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Profissionais CREF
+                    </div>
+                    <div class="about-feature">
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2.5">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Ambiente Climatizado
+                    </div>
+                    <div class="about-feature">
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2.5">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Estacionamento Gratis
+                    </div>
+                </div>
+                <a href="sobre.html" class="btn btn-primary" style="margin-top:32px;">Saiba Mais</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="section">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-tag">
+                <span class="line"></span>
+                Nossos Planos
+                <span class="line"></span>
+            </div>
+            <h2 class="section-title">Planos que <span>cabem no seu bolso</span></h2>
+            <p class="section-desc">Escolha o plano ideal para voce e comece hoje mesmo sua transformacao.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card reveal">
+                <div class="pricing-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <rect x="8" y="12" width="48" height="40" rx="4" stroke="#ffffff" stroke-width="2"/>
+                        <text x="32" y="44" text-anchor="middle" fill="#0066ff" font-size="24" font-weight="700" font-family="Oswald">B</text>
+                    </svg>
+                </div>
+                <h3>Basico</h3>
+                <div class="pricing-price">R$89<span>,90</span></div>
+                <div class="pricing-duration">/mes</div>
+                <ul class="pricing-features">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Musculacao liberada
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Horario comercial
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Acesso a area de cardio
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                        Aulas coletivas
+                    </li>
+                </ul>
+                <a href="contato.html" class="btn btn-secondary" style="width:100%;justify-content:center;">Assinar</a>
+            </div>
+            <div class="pricing-card featured reveal">
+                <div class="pricing-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <rect x="8" y="12" width="48" height="40" rx="4" stroke="#0066ff" stroke-width="2"/>
+                        <text x="32" y="44" text-anchor="middle" fill="#0066ff" font-size="24" font-weight="700" font-family="Oswald">P</text>
+                    </svg>
+                </div>
+                <h3>Premium</h3>
+                <div class="pricing-price">R$129<span>,90</span></div>
+                <div class="pricing-duration">/mes</div>
+                <ul class="pricing-features">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Todas as modalidades
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Horario estendido
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Aulas coletivas ilimitadas
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Avaliacao fisica mensal
+                    </li>
+                </ul>
+                <a href="contato.html" class="btn btn-primary" style="width:100%;justify-content:center;">Assinar</a>
+            </div>
+            <div class="pricing-card reveal">
+                <div class="pricing-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <rect x="8" y="12" width="48" height="40" rx="4" stroke="#ffffff" stroke-width="2"/>
+                        <text x="32" y="44" text-anchor="middle" fill="#0066ff" font-size="24" font-weight="700" font-family="Oswald">V</text>
+                    </svg>
+                </div>
+                <h3>VIP</h3>
+                <div class="pricing-price">R$199<span>,90</span></div>
+                <div class="pricing-duration">/mes</div>
+                <ul class="pricing-features">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Todos os beneficios
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Personal trainer incluso
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Acesso 24 horas
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Area VIP exclusiva
+                    </li>
+                </ul>
+                <a href="contato.html" class="btn btn-secondary" style="width:100%;justify-content:center;">Assinar</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content reveal">
+            <h2>Comece sua <span>transformacao</span> hoje</h2>
+            <p>Agende uma visita gratuita e conheca nossa estrutura. Nossos profissionais estao prontos para te ajudar a alcancar seus objetivos.</p>
+            <a href="contato.html" class="btn btn-primary btn-lg">Agendar Visita Gratuita</a>
+        </div>
+    </div>
+</section>
+
+</div><!-- main-content -->
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <a href="index.html" class="logo" style="margin-bottom:16px;display:inline-flex;">
+                    <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;">
+                        <rect x="4" y="18" width="8" height="12" rx="2" fill="#0066ff"/>
+                        <rect x="36" y="18" width="8" height="12" rx="2" fill="#0066ff"/>
+                        <rect x="14" y="8" width="6" height="32" rx="3" fill="#ffffff"/>
+                        <rect x="28" y="8" width="6" height="32" rx="3" fill="#ffffff"/>
+                        <rect x="8" y="8" width="32" height="6" rx="3" fill="#ffffff"/>
+                        <rect x="8" y="34" width="32" height="6" rx="3" fill="#ffffff"/>
+                        <circle cx="24" cy="24" r="4" fill="#0066ff"/>
+                    </svg>
+                    <div class="logo-text" style="font-size:22px;">IRON <span>GYM</span></div>
+                </a>
+                <p>A Iron Gym e a academia mais completa e moderna da cidade. Equipamentos de ultima geracao, profissionais qualificados e uma estrutura pensada para o seu melhor desempenho.</p>
+            </div>
+            <div>
+                <h4>Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="horarios.html">Horarios</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Modalidades</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#modalidades">Musculacao</a></li>
+                    <li><a href="index.html#modalidades">Crossfit</a></li>
+                    <li><a href="index.html#modalidades">Funcional</a></li>
+                    <li><a href="index.html#modalidades">Yoga</a></li>
+                    <li><a href="index.html#modalidades">Pilates</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <ul class="footer-links">
+                    <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+                    <li><a href="mailto:contato@irongym.com.br">contato@irongym.com.br</a></li>
+                    <li>Av. Paulista, 1000</li>
+                    <li>Sao Paulo - SP, 01310-100</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Iron Gym. Todos os direitos reservados.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5">
+                        <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="YouTube">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5">
+                        <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5">
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

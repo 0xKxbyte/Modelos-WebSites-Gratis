@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TechStore Pro</title>
+    <script>if(!localStorage.getItem('auth_gate')){window.location.href='../login-gate.html'}</script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236C3CF5'/%3E%3Cpath d='M16 6L6 12v8l10 6 10-6v-8L16 6z' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='white'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+</head>
+<body>
+    <div id="toast-container" class="toast-container"></div>
+
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#logoGrad)"/><path d="M20 8L10 14v12l10 6 10-6V14L20 8z" stroke="white" stroke-width="2.5" fill="none"/><circle cx="20" cy="20" r="5" fill="white"/><defs><linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#6C3CF5"/><stop offset="100%" stop-color="#E94560"/></linearGradient></defs></svg>
+                <span>TechStore</span>
+            </a>
+            <div style="flex:1;"></div>
+            <div class="header-actions">
+                <button class="action-btn" onclick="window.location.href='cart.html'">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    <span class="badge cart-badge" style="display:none;">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="auth-page">
+        <div class="auth-card reveal">
+            <h1><span class="gradient-text">Entrar</span></h1>
+            <p class="auth-subtitle">Acesse sua conta para continuar</p>
+            <form id="login-form" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Sua senha" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Entrar</button>
+            </form>
+            <div class="auth-divider">ou</div>
+            <button class="google-btn" onclick="Auth.loginWithGoogle()">
+                <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                Entrar com o Google
+            </button>
+            <div class="auth-footer">
+                Nao tem conta? <a href="register.html">Cadastre-se</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script>
+        function handleLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            Auth.login(email, password);
+        }
+    </script>
+</body>
+</html>

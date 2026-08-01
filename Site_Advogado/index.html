@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dr. Ricardo Almeida - Advocacia de Excelência. Mais de 15 anos de experiência em Direito Civil, Empresarial, Trabalhista e Tributário. Soluções jurídicas personalizadas.">
+  <meta name="keywords" content="advocacia, advogado, direito civil, direito empresarial, direito trabalhista, São Paulo">
+  <meta name="author" content="Dr. Ricardo Almeida">
+  <meta property="og:title" content="Dr. Ricardo Almeida | Advocacia de Excelência">
+  <meta property="og:description" content="Mais de 15 anos protegendo direitos com excelência e dedicação.">
+  <meta property="og:type" content="website">
+  <title>Dr. Ricardo Almeida | Advocacia de Excelência</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230a0a0a'/><path d='M50 20L20 35v20c0 12 6 22 30 30 24-8 30-18 30-30V35L50 20z' stroke='%23c9a84c' stroke-width='2' fill='none'/><path d='M40 50l6 6 14-14' stroke='%23c9a84c' stroke-width='2' fill='none'/></svg>">
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div class="preloader">
+    <div class="preloader-content">
+      <div class="preloader-ring"></div>
+      <div class="preloader-text">Dr. Ricardo Almeida</div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Navegacao principal">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3L4 9v6l8 6 8-6V9l-8-6z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          Ricardo Almeida
+          <span>Advocacia</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menu" type="button">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="servicos.html">Servicos</a></li>
+        <li><a href="contato.html" class="contact-btn">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Apresentacao">
+    <div id="hero-canvas" class="hero-canvas"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-pattern">
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="none">
+        <path d="M0,550 C360,450 720,650 1440,500" stroke="rgba(201,168,76,0.06)" stroke-width="1.5" fill="none"/>
+        <path d="M0,450 C480,550 960,350 1440,600" stroke="rgba(201,168,76,0.04)" stroke-width="1" fill="none"/>
+        <path d="M0,650 C300,750 800,450 1440,550" stroke="rgba(201,168,76,0.05)" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Excelencia Juridica Desde 2010
+        </div>
+        <h1>Protegendo Seus <span>Direitos</span> com Excelencia</h1>
+        <p>Mais de 15 anos de experiencia em Direito Civil, Empresarial e Trabalhista. Solucoes juridicas sob medida para cada cliente, com atendimento humanizado e resultado comprovado.</p>
+        <div class="hero-actions">
+          <a href="contato.html" class="btn btn-gold">
+            Solicitar Consulta
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <a href="sobre.html" class="btn btn-outline">
+            Conheca Nossa Historia
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Role</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section section-dark" aria-label="Numeros do escritorio">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="1500">0+</span>
+          <span class="stat-label">Casos Resolvidos</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="15">0+</span>
+          <span class="stat-label">Anos de Experiencia</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="98">0+</span>
+          <span class="stat-label">Por Cento Exito</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="2000">0+</span>
+          <span class="stat-label">Clientes Atendidos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT PREVIEW -->
+  <section class="section" aria-label="Sobre o advogado">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal-left">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=85" alt="Dr. Ricardo Almeida - Advogado" loading="lazy">
+          <div class="about-image-frame"></div>
+          <div class="about-badge">
+            <span class="number">15+</span>
+            <span class="label">Anos de Dedicacao</span>
+          </div>
+        </div>
+        <div class="about-text reveal-right">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            Quem Sou
+          </div>
+          <h3>Dr. Ricardo Almeida</h3>
+          <p>Advogado especialista em Direito Civil, Empresarial e Trabalhista, com mais de 15 anos de atuacao ininterrupta. Formado pela Universidade de Sao Paulo (USP), com LL.M. em Direito Empresarial pela Fundacao Getulio Vargas (FGV).</p>
+          <p>Minha missao e oferecer assessoria juridica de excelencia, combinando conhecimento tecnico aprofundado com atendimento humanizado e personalizado. Cada caso e unico e merece uma estrategia sob medida.</p>
+          <div class="animated-line"></div>
+          <div class="about-signature">
+            <div class="about-signature-svg">
+              <svg viewBox="0 0 120 50">
+                <path d="M10,38 Q15,20 28,18 Q42,16 38,32 Q34,48 48,25 Q62,5 78,22 Q94,40 108,15" stroke="#c9a84c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="name">Dr. Ricardo Almeida</div>
+              <div class="role">OAB/SP 123.456</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES PREVIEW -->
+  <section class="section section-dark" aria-label="Servicos juridicos">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+            <line x1="9" y1="21" x2="9" y2="9"/>
+          </svg>
+          Areas de Atuacao
+        </div>
+        <h2 class="section-title">Servicos Juridicos</h2>
+        <p class="section-subtitle">Solucoes completas em diversas areas do Direito, com estrategia personalizada para cada caso.</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none">
+              <path d="M32 4L8 16v14c0 12.4 6.4 24 24 30 17.6-6 24-17.6 24-30V16L32 4z" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M24 30l6 6 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Direito Civil</h3>
+          <p>Contratos, responsabilidade civil, direito de familia, sucessoes, obrigacoes e indenizacoes. Assessoria preventiva e contenciosa com foco em resultados.</p>
+          <a href="servicos.html" class="service-link">
+            Saiba mais
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none">
+              <rect x="8" y="20" width="48" height="36" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M8 20L32 8l24 12" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M24 36h16M24 44h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Direito Empresarial</h3>
+          <p>Constituicao de empresas, contratos societarios, fusoes, aquisicoes e recuperacao judicial. Consultoria completa para negocios de todos os portes.</p>
+          <a href="servicos.html" class="service-link">
+            Saiba mais
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="24" r="12" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M20 44c0-6.6 5.4-12 12-12s12 5.4 12 12" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          <h3>Direito Trabalhista</h3>
+          <p>Reclamacoes trabalhistas, acordos, defesas em acoes, direitos e deveres de empregados e empregadores. Atuacao estrategica em todas as esferas.</p>
+          <a href="servicos.html" class="service-link">
+            Saiba mais
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" aria-label="Depoimentos de clientes">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+          Depoimentos
+        </div>
+        <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+        <p class="section-subtitle">A satisfacao dos nossos clientes e o nosso maior reconhecimento.</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p>"Profissionalismo e dedicacao excepcionais. O Dr. Ricardo conduziu meu caso com total transparencia e obteve um resultado melhor do que eu esperava."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Carlos Mendes" loading="lazy">
+            <div>
+              <div class="author-name">Carlos Eduardo Mendes</div>
+              <div class="author-role">CEO - Mendes & Associados</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p>"Excelente advogado! Resolveu uma questao trabalhista complexa em tempo recorde. Recomendo a todos que buscam seriedade e competencia."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Ana Lucia Silva" loading="lazy">
+            <div>
+              <div class="author-name">Ana Lucia Silva</div>
+              <div class="author-role">Diretora Medica - Hospital Sao Lucas</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p>"Atendimento humanizado e extremamente profissional. O Dr. Ricardo me orientou em cada etapa do processo com clareza e seguranca."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Fernando Oliveira" loading="lazy">
+            <div>
+              <div class="author-name">Fernando Oliveira</div>
+              <div class="author-role">Socio-Diretor - Oliveira Engenharia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG PREVIEW -->
+  <section class="section section-dark" aria-label="Blog juridico">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+          Blog Juridico
+        </div>
+        <h2 class="section-title">Artigos e Atualizacoes</h2>
+        <p class="section-subtitle">Conteudo juridico relevante para manter voce informado sobre seus direitos.</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card reveal">
+          <div class="blog-card-image">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&q=80" alt="Planejamento Sucessorio" loading="lazy">
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-card-tag">Direito de Familia</span>
+            <h3>Planejamento Sucessorio: Protegendo o Futuro da Sua Familia</h3>
+            <p>Entenda como o planejamento sucessorio pode proteger seu patrimonio e garantir tranquilidade para sua familia.</p>
+            <a href="#" class="blog-card-link">
+              Ler artigo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="blog-card reveal">
+          <div class="blog-card-image">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&q=80" alt="Reforma Trabalhista" loading="lazy">
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-card-tag">Direito Trabalhista</span>
+            <h3>Reforma Trabalhista: O Que Mudou e Como Impacta Seu Negocio</h3>
+            <p>Principais alteracoes da reforma trabalhista e como adequar sua empresa as novas regras.</p>
+            <a href="#" class="blog-card-link">
+              Ler artigo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="blog-card reveal">
+          <div class="blog-card-image">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&q=80" alt="LGPD" loading="lazy">
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-card-tag">Direito Digital</span>
+            <h3>LGPD: Como Adequar Seu Escritorio a Nova Lei de Protecao de Dados</h3>
+            <p>Passos essenciais para adequar seu escritorio a Lei Geral de Protecao de Dados.</p>
+            <a href="#" class="blog-card-link">
+              Ler artigo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="section" style="padding: 80px 0;">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom: 48px;">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          Instituicoes Parceiras
+        </div>
+        <h2 class="section-title">Confianca Reconhecida</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="partners-grid">
+        <div class="partner-item reveal">
+          <svg viewBox="0 0 120 40">
+            <rect x="5" y="5" width="110" height="30" rx="3" stroke="#c9a84c" stroke-width="1" fill="none" opacity="0.5"/>
+            <text x="60" y="25" text-anchor="middle" fill="#c9a84c" font-size="14" font-family="serif" font-style="italic" font-weight="bold" opacity="0.85">OAB</text>
+          </svg>
+        </div>
+        <div class="partner-item reveal">
+          <svg viewBox="0 0 120 40">
+            <rect x="5" y="5" width="110" height="30" rx="3" stroke="#c9a84c" stroke-width="1" fill="none" opacity="0.5"/>
+            <text x="60" y="25" text-anchor="middle" fill="#c9a84c" font-size="14" font-family="sans-serif" font-weight="bold" opacity="0.85">USP</text>
+          </svg>
+        </div>
+        <div class="partner-item reveal">
+          <svg viewBox="0 0 120 40">
+            <rect x="5" y="5" width="110" height="30" rx="3" stroke="#c9a84c" stroke-width="1" fill="none" opacity="0.5"/>
+            <text x="60" y="25" text-anchor="middle" fill="#c9a84c" font-size="13" font-family="sans-serif" font-weight="bold" opacity="0.85">FGV</text>
+          </svg>
+        </div>
+        <div class="partner-item reveal">
+          <svg viewBox="0 0 120 40">
+            <rect x="5" y="5" width="110" height="30" rx="3" stroke="#c9a84c" stroke-width="1" fill="none" opacity="0.5"/>
+            <text x="60" y="25" text-anchor="middle" fill="#c9a84c" font-size="14" font-family="serif" font-style="italic" font-weight="bold" opacity="0.85">IASP</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" aria-label="Chamada para acao">
+    <div class="container">
+      <div class="cta-content reveal">
+        <h2>Precisa de Orientacao Juridica?</h2>
+        <p>Agende uma consulta e descubra como podemos ajudar a proteger seus direitos e interesses com excelencia e dedicacao.</p>
+        <a href="contato.html" class="btn btn-gold">
+          Agendar Consulta
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="navbar-brand">
+            <div class="brand-mark">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3L4 9v6l8 6 8-6V9l-8-6z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              Ricardo Almeida
+              <span>Advocacia</span>
+            </div>
+          </a>
+          <p>Advocacia de excelencia com atendimento personalizado. Mais de 15 anos protegendo direitos e oferecendo solucoes juridicas completas.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 11v6M8 8v0M12 17v-4.5a2.5 2.5 0 0 1 5 0V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M16 8h-2a2 2 0 0 0-2 2v10M12 14h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Navegacao</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Servicos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Areas</h4>
+          <ul class="footer-links">
+            <li><a href="servicos.html">Direito Civil</a></li>
+            <li><a href="servicos.html">Direito Empresarial</a></li>
+            <li><a href="servicos.html">Direito Trabalhista</a></li>
+            <li><a href="servicos.html">Direito Tributario</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Receba conteudos juridicos exclusivos e atualizacoes importantes.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Seu email" required>
+            <button type="submit">Inscrever</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Dr. Ricardo Almeida. Todos os direitos reservados.</span>
+        <span>Desenvolvido com dedica&ccedil;&atilde;o para sua confian&ccedil;a</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/three-setup.js"></script>
+</body>
+</html>
